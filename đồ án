@@ -306,7 +306,7 @@ void main()
 	FixConsoleWindow();
 	srand(time_t(NULL));
 	StartGame();
-	bool isPlay = PlaySound("", NULL, SND_FILENAME)
+	PlaySound(TEXT("tenfile.mav"), NULL, SND_SYNC);
 	thread t1(SubThread);
 		GotoXY(10, 1); cout << "       XXXXXXXX  XXXXXXX    XXXXX   XXXXX  XXXXX  XXXXXX  XXX    XX  XXXXXXX       XXXXXXX    XXXXX    XXXXX   XXXXXX         ";
 		GotoXY(10, 2); cout << "       X         X      X  X     X  X      X        XX    XX X   XX  X             X      X  X     X  X     X  X     X        ";
