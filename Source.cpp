@@ -78,7 +78,7 @@ void DrawBoard(int x, int y, int width, int height, int curPosX = 0, int curPosY
 		GotoXY(x, i); cout << 'X';
 		GotoXY(x + width, i); cout << 'X';
 	}
-	GotoXY(curPosX, curPosY);
+	
 }
 
 void StartGame() {
@@ -306,7 +306,17 @@ void main()
 	FixConsoleWindow();
 	srand(time_t(NULL));
 	StartGame();
+	bool isPlay = PlaySound("", NULL, SND_FILENAME)
 	thread t1(SubThread);
+		GotoXY(10, 1); cout << "       XXXXXXXX  XXXXXXX    XXXXX   XXXXX  XXXXX  XXXXXX  XXX    XX  XXXXXXX       XXXXXXX    XXXXX    XXXXX   XXXXXX         ";
+		GotoXY(10, 2); cout << "       X         X      X  X     X  X      X        XX    XX X   XX  X             X      X  X     X  X     X  X     X        ";
+		GotoXY(10, 3); cout << "       X         XXXXXXX   X     X  XXXXX  XXXXX    XX    XX  X  XX  X   XXX       XXXXXXX   X     X  XXXXXXX  X      X       ";
+		GotoXY(10, 4); cout << "       X         X      X  X     X      X      X    XX    XX   X XX  X     X       X      X  X     X  X     X  X     X        ";
+		GotoXY(10, 5); cout << "       XXXXXXXX  X      X   XXXXX   XXXXX  XXXXX  XXXXXX  XX    XXX  XXXXXXX       X      X   XXXXX   X     X  XXXXXX         ";
+		
+		GotoXY(17,  8);  cout << "   1. New  game.";
+		GotoXY(17,  9);  cout << "   2. Load game.";
+		GotoXY(17, 10);  cout << "   3. Quit.";
 	while (1)
 	{
 		temp = toupper(_getch());
